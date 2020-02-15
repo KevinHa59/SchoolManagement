@@ -1,0 +1,338 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 2, 2020, 1:08:51 PM
+    Author     : KevinHa
+*/
+
+.root {
+    -fx-background-color: #ffffff;
+    
+}
+.mainFxmlClass {
+    -fx-background-color: #999999;
+    -fx-background-image: url(images/bg-white.png);
+    
+}
+.textfield{
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+     
+}
+.textfield_White_BG{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #333333;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    
+}
+.textfield_White_BG_Label{
+    -fx-text-fill: #666666;
+    -fx-font-size: 16;
+    -fx-padding: 0 0 0 5;
+    
+}
+.textfield_White_BG_Label_Title{
+    -fx-text-fill: #666666;
+    -fx-font-size: 20;
+    -fx-padding: 0 0 0 5;
+    
+}
+.titlebar {
+    -fx-background-color: #092b46; 
+}
+#SchoolLogoPane {
+    -fx-background-color: #092e6e;
+    
+}
+#SchoolLogoBackground {
+    -fx-background-color: #f6f6f6;
+    
+}
+#SchoolLoginPanBackground {
+    -fx-background-color: #f6f6f6;
+    
+}
+#btn_Login {
+    -fx-background-color: #092e6e;
+    
+    -fx-text-fill: #ffffff;
+    
+}
+#btn_Login:hover {
+    -fx-background-color: #007b42;
+    
+    -fx-text-fill: #ffffff;
+    
+}
+#btn_Close {
+    -fx-background-color: #e13939;
+    -fx-text-fill: #3f3f3f;
+    -fx-background-radius: 10;
+    -fx-font-size: 8;
+    -fx-font-weight: bold;
+    
+    
+    
+}
+#btn_Close:hover {
+    -fx-background-color: #e13939;
+    -fx-text-fill: #ffffff;
+    
+}
+#btn_Minimize {
+    -fx-background-color: #ffff66;
+    -fx-text-fill: #3f3f3f;
+    -fx-background-radius: 10;
+    -fx-font-size: 8;
+    -fx-font-weight: bold;
+    
+    
+    
+}
+#btn_Minimize:hover {
+    -fx-background-color: #ffff66;
+    -fx-text-fill: #ffffff;
+    
+}
+#btn_Maximize {
+    -fx-background-color: #00cc66;
+    -fx-text-fill: #3f3f3f;
+    -fx-background-radius: 10;
+    -fx-font-size: 8;
+    -fx-font-weight: bold;
+}
+#btn_Maximize:hover {
+    -fx-background-color: #00cc66;
+    -fx-text-fill: #ffffff;
+    
+}
+#loginTitleBackground {
+    -fx-background-color: #092e6e;
+    
+}
+/* Dashboard */
+.MainMenuButton {
+   -fx-background-color: transparent;
+   -fx-text-fill:#3f3f3f;
+   -fx-font-size: 15;
+   -fx-alignment: CENTER_LEFT;
+   -fx-padding: 0 10 0 50;
+    
+}
+
+.MainMenuButton:hover{
+    -fx-border-color: #666666;
+    -fx-border-width: 1;
+}
+.MainMenuButton:pressed {
+
+    -fx-background-color: #09705b;  
+}
+.MainMenuButton:focused{
+    -fx-background-color: #999999;
+    -fx-text-fill: #3f3f3f;
+    
+}
+/* Title Bar Controller */
+.TitleBar_Button_Close {
+    -fx-background-color: #e13939;
+    -fx-background-radius: 15;
+    
+}
+.TitleBar_Button_Minimize {
+    -fx-background-color: #ffff66;
+    -fx-background-radius: 15;
+    
+}
+
+/* Main Login */
+.Login_ColorBackground {
+    -fx-background-color: #333333;
+    
+}
+.Login_LogoColorBackground {
+    -fx-background-color: #f6f6f6;
+    
+}
+.Button_Dark_BG {
+    -fx-background-color: transparent;
+    -fx-border-color: #ffffff;
+    -fx-border-radius: 25;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    
+}
+.Button_White_BG {
+    -fx-background-color: transparent;
+    -fx-border-color: #3f3f3f;
+    -fx-border-radius: 25;
+    -fx-text-fill: #3f3f3f;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    
+}
+/* Dashboard */
+.Dashboard_TitleBarBackground {
+    -fx-background-color: #ffffff;
+    
+}
+.Dashboard_LeftMenuBackground {
+    -fx-background-color: #ffffff;
+    
+}
+/* Hyper Link */
+.Link_ForgotPassword {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    
+}
+/* Title Bar */
+.label_titlebar {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    
+}
+/* Capcha */
+.Capcha_Pane {
+    -fx-background-color: #f6f6f6;
+    -fx-background-radius: 25;
+    
+}
+/* Create Account */
+.TitleBG{
+    -fx-background-color: transparent;
+    -fx-text-fill: #3f3f3f;
+    -fx-font-size: 20;
+    -fx-padding: 0 0 0 50;
+    
+}
+.TitleContainerBG{
+    -fx-background-image: url(images/bg-dark.png);
+    
+}
+.TitleContainerText{
+    -fx-text-fill: #f6f6f6;
+    -fx-font-size: 20;
+    -fx-padding: 0 0 0 50;
+    
+}
+.TitleText{
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 20;
+    -fx-font-style: italic;
+    -fx-text-alignment: center;
+    -fx-padding: 0 0 0 50;
+    
+}
+.label_Textfield_Black_BG {
+    -fx-text-fill: #f6f6f6;
+    -fx-font-size: 16;
+    -fx-padding: 0 0 0 5;
+    
+}
+
+/* List View */
+.ListView_Label {
+    -fx-text-fill: #f6f6f6;
+    -fx-font-size: 14;
+    -fx-padding: 0 10 0 10;
+    
+}
+/* User Information Text */
+.UserInfo_Label {
+    -fx-text-fill: #000000;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-padding: 30 0 0 10;
+    
+    
+    
+}
+/* User Information Pane */
+.Pane_Container {
+    
+    -fx-padding: 20 0 0 0;
+    -fx-border-radius: 15;
+    
+}
+/* Scroll pane */
+.scroll-pane   { 
+    -fx-background-color: #ffffff; 
+    -fx-border-color: #ffffff;
+    
+
+}
+.scroll-pane > .viewport   { 
+    -fx-background-color: #ffffff; 
+    -fx-border-color: #ffffff;
+    
+
+}
+.Dashboard_course_item_pane{
+    -fx-border-width: 0 0 0 3;
+    -fx-border-color: #000000;
+    
+}
+.Dashboard_course_item_text{
+    -fx-text-fill: #000000;
+    -fx-font-size: 16;
+    
+}
+.Dashboard_course_item_text:hover{
+    -fx-text-fill: #000000;
+    -fx-font-size: 16;
+    -fx-font-weight:bold;
+    
+}
+
+/* courses */
+.Courses_Panel {
+    -fx-background-color: #ffffff;
+    -fx-border-width: 0 0 0 10;
+    
+    
+}
+.Courses_Panel:hover {
+    -fx-border-color: #999999;
+    -fx-border-width: 1 1 1 1;
+    
+}
+.Courses_Panel_Title {
+    -fx-font-size: 25;
+    -fx-font-weight: bold;
+    
+}
+.Courses_Panel_Content {
+    -fx-font-size: 20;
+    
+}
+/* Last Course */
+.lastcourst_container {
+    -fx-border-color: #3f3f3f;
+    -fx-border-width: 0 0 0 4;
+    -fx-background-color: #f6f6f6;
+    
+}
+.lastcourst_title_detail {
+    -fx-font-size: 17;
+    -fx-font-weight: bold;
+    -fx-text-fill: #666666;
+    -fx-padding: 5 0 0 5;
+    
+}
+.lastcourst_session {
+    -fx-font-size: 15;
+    -fx-text-fill: #666666;
+    -fx-padding: 5 0 0 5;
+    
+}
