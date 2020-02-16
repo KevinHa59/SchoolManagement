@@ -139,6 +139,30 @@ and open the template in the editor.
     -fx-text-fill: #3f3f3f;
     
 }
+
+.SubMenuButton {
+   -fx-background-color: transparent;
+   -fx-text-fill:#3f3f3f;
+   -fx-font-size: 15;
+   -fx-alignment: CENTER_LEFT;
+   -fx-padding: 0 10 0 50;
+   -fx-border-width: 0 0 0 1;
+   -fx-border-color: #666666;
+    
+}
+.SubMenuButton:hover{
+    -fx-border-color: #666666;
+    -fx-border-width: 1;
+}
+.SubMenuButton:pressed {
+
+    -fx-background-color: #09705b;  
+}
+.SubMenuButton:focused{
+    -fx-background-color: #999999;
+    -fx-text-fill: #3f3f3f;
+    
+}
 /* Title Bar Controller */
 .TitleBar_Button_Close {
     -fx-background-color: #e13939;

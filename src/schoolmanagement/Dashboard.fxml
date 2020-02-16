@@ -62,7 +62,7 @@
                                     </Pane>
                                     <Pane fx:id="Button_YourAccountDetail" layoutX="10.0" layoutY="55.0" maxHeight="0.0" prefHeight="45.0" prefWidth="250.0" visible="false">
                                        <children>
-                                          <Button fx:id="btn_youraccountdetail" mnemonicParsing="false" onMouseClicked="#OnYourInformationClicked" prefHeight="45.0" prefWidth="250.0" styleClass="MainMenuButton" stylesheets="@styles.css" text="Your Information" />
+                                          <Button fx:id="btn_youraccountdetail" mnemonicParsing="false" onMouseClicked="#OnYourInformationClicked" prefHeight="45.0" prefWidth="250.0" styleClass="SubMenuButton" stylesheets="@styles.css" text="Your Information" />
                                           <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@icons/Basic_0000s_0004s_0004_List.png" />
@@ -78,7 +78,7 @@
                                     </Pane>
                                     <Pane fx:id="Button_UpdateInformation" layoutX="10.0" layoutY="100.0" maxHeight="0.0" prefHeight="45.0" prefWidth="250.0" visible="false">
                                        <children>
-                                          <Button fx:id="btn_youraccountdetail1" mnemonicParsing="false" onMouseClicked="#OnUpdateInformationClicked" prefHeight="45.0" prefWidth="250.0" styleClass="MainMenuButton" stylesheets="@styles.css" text="Update Information" />
+                                          <Button fx:id="btn_youraccountdetail1" mnemonicParsing="false" onMouseClicked="#OnUpdateInformationClicked" prefHeight="45.0" prefWidth="250.0" styleClass="SubMenuButton" stylesheets="@styles.css" text="Update Information" />
                                           <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@icons/Basic_0000s_0007s_0002_Edit.png" />
@@ -94,7 +94,7 @@
                                     </Pane>
                                     <Pane fx:id="Button_ChangePassword" layoutX="10.0" layoutY="142.0" maxHeight="0.0" prefHeight="45.0" prefWidth="250.0" visible="false">
                                        <children>
-                                          <Button fx:id="btn_youraccountdetail11" mnemonicParsing="false" onMouseClicked="#OnChangePasswordClicked" prefHeight="45.0" prefWidth="250.0" styleClass="MainMenuButton" stylesheets="@styles.css" text="Change Password" />
+                                          <Button fx:id="btn_youraccountdetail11" mnemonicParsing="false" onMouseClicked="#OnChangePasswordClicked" prefHeight="45.0" prefWidth="250.0" styleClass="SubMenuButton" stylesheets="@styles.css" text="Change Password" />
                                           <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@icons/Basic_0000s_0009s_0005_Shield.png" />
@@ -136,7 +136,7 @@
                                     </Pane>
                                     <Pane fx:id="Button_ViewCourses" layoutX="40.0" layoutY="370.0" maxHeight="0.0" prefHeight="45.0" prefWidth="250.0" visible="false">
                                        <children>
-                                          <Button fx:id="btn_ViewCourse" mnemonicParsing="false" onMouseClicked="#OnViewCoursesClicked" prefHeight="45.0" prefWidth="250.0" styleClass="MainMenuButton" stylesheets="@styles.css" text="Your Courses" />
+                                          <Button fx:id="btn_ViewCourse" mnemonicParsing="false" onMouseClicked="#OnViewCoursesClicked" prefHeight="45.0" prefWidth="250.0" styleClass="SubMenuButton" stylesheets="@styles.css" text="Your Courses" />
                                           <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@icons/Basic_0000s_0004s_0009_Menu.png" />
@@ -152,7 +152,7 @@
                                     </Pane>
                                     <Pane fx:id="Button_SearchCourse" layoutX="10.0" layoutY="325.0" maxHeight="0.0" prefHeight="45.0" prefWidth="250.0" visible="false">
                                        <children>
-                                          <Button fx:id="btn_searchcourses" mnemonicParsing="false" onMouseClicked="#OnSearchCoursesClicked" prefHeight="45.0" prefWidth="250.0" styleClass="MainMenuButton" stylesheets="@styles.css" text="Search" />
+                                          <Button fx:id="btn_searchcourses" mnemonicParsing="false" onMouseClicked="#OnSearchCoursesClicked" prefHeight="45.0" prefWidth="250.0" styleClass="SubMenuButton" stylesheets="@styles.css" text="Search" />
                                           <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@icons/Basic_0000s_0001s_0001_Search.png" />

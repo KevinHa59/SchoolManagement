@@ -46,7 +46,7 @@ import schoolmanagement.UserController.UpdateInformationController;
  */
 public class DashboardController implements Initializable {
 
-    
+    Boolean dragable = true;
     //private Stage stage;
     double xx, yy;
     @FXML
@@ -229,26 +229,45 @@ public class DashboardController implements Initializable {
         Group.forEach((n)->(n).setMaxHeight(45));
         
     }
+    
+    ArrayList<Pane> GroupTemp = new ArrayList<>();
     void ButtonGroupControl(ArrayList<Pane> Group ){
-        SubGroupControl.forEach((n)->(n).forEach((m)->(m).setVisible(false)));
-        SubGroupControl.forEach((n)->(n).forEach((m)->(m).setDisable(true)));
-        SubGroupControl.forEach((n)->(n).forEach((m)->(m).setMaxHeight(0)));
-
+        if(GroupTemp != Group){
+            
+            SubGroupControl.forEach((n)->(n).forEach((m)->(m).setVisible(false)));
+            SubGroupControl.forEach((n)->(n).forEach((m)->(m).setDisable(true)));
+            SubGroupControl.forEach((n)->(n).forEach((m)->(m).setMaxHeight(0)));
+            
             Group.forEach((n)->(n).setVisible(true));
             Group.forEach((n)->(n).setDisable(false));
             Group.forEach((n)->(n).setMaxHeight(45));
+            
+            GroupTemp = Group;
+        }else {
+            Group.forEach((n)->(n).setVisible(false));
+            Group.forEach((n)->(n).setDisable(true));
+            Group.forEach((n)->(n).setMaxHeight(0));
+            
+            GroupTemp = null;
+        }
+        
+        
 
     }
     @FXML
     private void rootOnMouseDragged(MouseEvent event) {
-        root.getScene().getWindow().setX(event.getScreenX()-xx);
-        root.getScene().getWindow().setY(event.getScreenY()-yy);
+        if(dragable == true){
+            root.getScene().getWindow().setX(event.getScreenX()-xx);
+            root.getScene().getWindow().setY(event.getScreenY()-yy);
+        }
     }
 
     @FXML
     private void rootOnMousePressed(MouseEvent event) {
-        xx = event.getSceneX();
-        yy = event.getSceneY();
+        if(dragable == true){
+            xx = event.getSceneX();
+            yy = event.getSceneY();
+        }
     }
 
     @FXML
@@ -315,6 +334,7 @@ public class DashboardController implements Initializable {
          lastY = currentY; 
          lastWidth = currentWidth; 
          lastHeight = currentHeight; 
+         dragable = false;
  
        } else { 
  
@@ -324,6 +344,7 @@ public class DashboardController implements Initializable {
          w.setY(lastY); 
          w.setWidth(lastWidth); 
          w.setHeight(lastHeight); 
+         dragable = true;
       } 
  
       event.consume();  // don't bubble up to title bar 
@@ -502,5 +523,17 @@ public class DashboardController implements Initializable {
 
     @FXML
     private void OnSearchCoursesClicked(MouseEvent event) {
+        FadingSceneOut();
+        Parent parent = null;
+        
+        FXMLLoader loader= new FXMLLoader(getClass().getResource("SearchCourse.fxml"));
+        
+        try {
+            this.root = loader.load();
+        } catch (IOException ex) {
+            Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        FadingSceneIn();
+        borderPane.setCenter(this.root);
     }
 }

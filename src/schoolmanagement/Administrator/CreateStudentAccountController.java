@@ -13,6 +13,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
@@ -60,7 +61,8 @@ public class CreateStudentAccountController implements Initializable {
     private ArrayList<String> MajorList;
     @FXML
     private ComboBox combo_major;
-
+    
+    Alert a;
 
     /**
      * Initializes the controller class.
@@ -69,6 +71,8 @@ public class CreateStudentAccountController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         database = new DatabaseConnection();
+        a = new Alert(Alert.AlertType.INFORMATION);
+        a.setTitle("Create Student Account");
         LoadDegreeList();
         LoadMajorList();
         
@@ -91,8 +95,52 @@ public class CreateStudentAccountController implements Initializable {
     @FXML
     private void OnCreateClicked(MouseEvent event) {
         //database = new DatabaseConnection();
-        
-        database.CreateStudentAccount(txt_firstname.getText(), txt_lastname.getText(), txt_phonenumber.getText(), txt_street.getText(), txt_city.getText(), txt_state.getText(), txt_zipcode.getText(), txt_birthday.getValue(),combo_degree.getValue().toString(), combo_major.getValue().toString());
+        String error = "";
+        if(txt_firstname.getText().toString().equals("")){
+          error = "* First name is required";
+        }
+        if(txt_lastname.getText().toString().equals("")){
+          error = error + "\n* Last name is required";
+        }
+        if(txt_phonenumber.getText().toString().equals("")){
+          error = error + "\n* Phone number is required";
+        }else if(txt_phonenumber.getText().toString().matches("[0-9]+$")){
+            error = error + "\n* Phone number contains number only";
+        }else if(txt_phonenumber.getText().toString().length() != 9){
+            error = error + "\n* Phone number is not correct format. (9 numbers)";
+        }
+        if(txt_birthday.getValue() == null){
+          error = error + "\n* Birthday is required";
+        }
+        if(txt_street.getText().toString().equals("")){
+          error = error + "\n* Street is required";
+        }
+        if(txt_city.getText().toString().equals("")){
+          error = error + "\n* City is required";
+        }
+        if(txt_state.getText().toString().equals("")){
+          error = error + "\n* State is required";
+        }
+        if(txt_zipcode.getText().toString().equals("")){
+          error = error + "\n* Zipcode is required";
+        }else if(!txt_zipcode.getText().toString().matches("[0-9]+$")){
+            error = error + "\n* Zipcode contains number only.";
+        }else if(txt_zipcode.getText().toString().length() != 5){
+            error = error + "\n* Zipcode is not correct format. (5 numbers)";
+        }if(combo_degree.getSelectionModel().isEmpty()){
+            error = error + "\n* Degree is required";
+        }
+        if(combo_major.getSelectionModel().isEmpty()){
+            error = error + "\n* Major is required";
+        }
+        if(error.equals("")){
+            database.CreateStudentAccount(txt_firstname.getText(), txt_lastname.getText(), txt_phonenumber.getText(), txt_street.getText(), txt_city.getText(), txt_state.getText(), txt_zipcode.getText(), txt_birthday.getValue(),combo_degree.getValue().toString(), combo_major.getValue().toString());
+            a.setContentText("Student '"+txt_firstname.getText().toString()+ " " +txt_lastname.getText().toString() +"' has been created successfully!");
+        }
+        else{
+            a.setContentText(error);
+        }
+        a.show();
     }
 
     @FXML
@@ -105,6 +153,8 @@ public class CreateStudentAccountController implements Initializable {
         txt_state.setText("");
         txt_zipcode.setText("");
         txt_birthday.setValue(null);
+        combo_degree.setValue(null);
+        combo_major.setValue(null);
     }
     
 }

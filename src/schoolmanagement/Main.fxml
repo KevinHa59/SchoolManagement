@@ -98,6 +98,9 @@
                <font>
                   <Font name="System Bold" size="45.0" />
                </font>
+               <effect>
+                  <Glow level="0.69" />
+               </effect>
             </Label>
          </children>
       </Pane>

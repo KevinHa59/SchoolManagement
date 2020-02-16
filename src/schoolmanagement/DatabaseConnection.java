@@ -17,7 +17,9 @@ import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.TimeZone;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -346,7 +348,7 @@ public class DatabaseConnection {
                 "INSERT INTO staff_information" +
                 "(id,username,firstname,lastname,password,email,phone,street,city,state,zip,birthday,job_id,salary)" +
                 "VALUES" +
-                "('"+ID+"','"+LastName.toLowerCase()+FirstName.toLowerCase().charAt(0)+DateNo+"','"+FirstName+"','"+LastName+"','"+FirstName.toLowerCase()+LastName.toLowerCase()+ BirthYear +"','"+LastName.toLowerCase()+FirstName.toLowerCase().charAt(0)+DateNo+"@student.gator.edu','"+PhoneNumber+"','"+Address+"','"+City+"','"+State+"','"+Zip+"','"+Birthday+"',1,"+salary+")";
+                "('"+ID+"','"+LastName.toLowerCase()+FirstName.toLowerCase().charAt(0)+DateNo+"','"+FirstName+"','"+LastName+"','"+FirstName.toLowerCase()+LastName.toLowerCase()+ BirthYear +"','"+LastName.toLowerCase()+FirstName.toLowerCase().charAt(0)+DateNo+"@uhd.edu','"+PhoneNumber+"','"+Address+"','"+City+"','"+State+"','"+Zip+"','"+Birthday+"',1,"+salary+")";
         
         Statement statement;
         try {
@@ -374,5 +376,48 @@ public class DatabaseConnection {
         }
         return oblist;
 
+    }
+    
+    // Load All Subject
+    public ArrayList<String> LoadAllSubject(){
+        ArrayList<String> list = new ArrayList<>();
+        Connection con = getConnection();
+        String SQL = "SELECT * FROM course_subject";
+        
+        Statement statement;
+        try {
+            statement = con.createStatement();
+            ResultSet rs = statement.executeQuery(SQL);
+            
+            while(rs.next()){
+                list.add(rs.getString("subject_name"));
+            }
+            
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list; 
+    }
+    // Load All Subject
+    public ArrayList<String> LoadAllSchoolLocation(){
+        ArrayList<String> list = new ArrayList<>();
+        Connection con = getConnection();
+        String SQL = "SELECT * FROM school_location";
+        
+        Statement statement;
+        try {
+            statement = con.createStatement();
+            ResultSet rs = statement.executeQuery(SQL);
+            
+            while(rs.next()){
+                list.add(rs.getString("location_name"));
+            }
+            
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list; 
     }
 }
